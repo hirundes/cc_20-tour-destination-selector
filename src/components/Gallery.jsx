@@ -7,7 +7,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
   const fetchTours = async () => {
     try {
-      const res = await fetch('https://course-api.com/react-tours-project');
+      const res = await fetch('https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project');
       const data = await res.json();
       setTours(data);
       setLoading(false);
