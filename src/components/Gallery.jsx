@@ -10,7 +10,7 @@ const Gallery = ({ tours, selectedDestination, onRemove, onRefresh }) => {
     if (filteredTours.length === 0) {
       return (
           <div>
-              <p>No available tours for the selected destination.</p>
+              <p>No available tours for the selected destination. Select Refresh to reload tours.</p>
               <button onClick={() => {
                   console.log('Refresh button clicked'); 
                   onRefresh(); //Calling onRefresh    

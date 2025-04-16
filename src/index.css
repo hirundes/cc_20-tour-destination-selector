@@ -66,3 +66,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+img { 
+  max-width: 100%; 
+  height: auto; 
+  width: 300px; 
+  border-radius: 30px; 
+  border: 5px solid #008839;
+  object-fit: cover; 
+}
+
+.tour-card {
+  border-bottom: 10px solid #008839; 
+  padding-bottom: 1rem; 
+  margin-bottom: 1rem; 
+}
