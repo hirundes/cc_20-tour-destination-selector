@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const TourCard = ({ id, image, info, price, name, onRemove }) => {
   const [readMore, setReadMore] = useState(false);
 
-  return (
+  return ( //Display tour information with Read More and Show Less buttons AND onRemove button
     <article className="tour-card">
       <img src={image} alt={name} />
       <footer>

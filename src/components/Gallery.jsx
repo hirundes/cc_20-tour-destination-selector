@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import TourCard from './TourCard';
 
-const Gallery = ({ tours, selectedDestination, onRemove }) => {
-  const filteredTours = selectedDestination === 'All Destinations'
+const Gallery = ({ tours, selectedDestination, onRemove, onRefresh }) => {
+  const filteredTours = selectedDestination === 'All Destinations' //Filters the tours based on the destination, All Destinations shows all tours and specific selected tours are shown
     ? tours
     : tours.filter((tour) => tour.name === selectedDestination);
 
-    if (filteredTours.length === 0) {
-        return <p>No available tours for the selected destination.</p>;
-        }
 
+    if (filteredTours.length === 0) {
+      return (
+          <div>
+              <p>No available tours for the selected destination.</p>
+              <button onClick={() => {
+                  console.log('Refresh button clicked'); 
+                  onRefresh(); //Calling onRefresh    
+              }}>
+                  Refresh
+              </button>
+          </div>
+      );
+  }
+
+//Renders the list of filtered tours from TourCard  
   return (
     <section className="gallery">
       {filteredTours.map((tour) => (
@@ -20,3 +32,7 @@ const Gallery = ({ tours, selectedDestination, onRemove }) => {
 };
 
 export default Gallery;
+
+
+
+
