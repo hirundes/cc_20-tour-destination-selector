@@ -12,7 +12,7 @@ const Gallery = ({ tours, selectedDestination, onRemove, onRefresh }) => {
           <div>
               <p>No available tours for the selected destination. Select Refresh to reload tours.</p>
               <button onClick={() => {
-                  console.log('Refresh button clicked'); 
+                  console.log('Refresh button clicked'); //Utilized Copilot for help with the clicking of the onRefresh button
                   onRefresh(); //Calling onRefresh    
               }}>
                   Refresh
